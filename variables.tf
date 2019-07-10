@@ -1,5 +1,5 @@
 variable "namespace" {
-  description = "Namespace (e.g. `cp` or `cloudposse`)"
+  description = "Namespace (e.g. `bb` or `binbash`)"
   type        = "string"
 }
 
@@ -63,11 +63,6 @@ variable "lifecycle_prefix" {
   default     = ""
 }
 
-variable "lifecycle_tags" {
-  description = "Tags filter. Used to manage object lifecycle events"
-  default     = {}
-}
-
 variable "noncurrent_version_expiration_days" {
   description = "Specifies when noncurrent object versions expire"
   default     = "90"
@@ -101,4 +96,9 @@ variable "sse_algorithm" {
 variable "kms_master_key_id" {
   description = "The AWS KMS master key ID used for the SSE-KMS encryption. This can only be used when you set the value of sse_algorithm as aws:kms. The default aws/s3 AWS KMS master key is used if this element is absent while the sse_algorithm is aws:kms"
   default     = ""
+}
+
+variable "accountIDS" {
+  type        = "list"
+  description = "a list of accountids"
 }

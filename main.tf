@@ -38,9 +38,7 @@ data "aws_iam_policy_document" "default" {
       "s3:PutObject",
     ]
 
-    resources = [
-      "arn:aws:s3:::${module.label.id}/*",
-    ]
+    resources = ["${var.accountIDS}"]
 
     condition {
       test     = "StringEquals"
