@@ -63,6 +63,11 @@ variable "lifecycle_prefix" {
   default     = ""
 }
 
+variable "lifecycle_tags" {
+  description = "Tags filter. Used to manage object lifecycle events"
+  default     = {}
+}
+
 variable "noncurrent_version_expiration_days" {
   description = "Specifies when noncurrent object versions expire"
   default     = "90"
