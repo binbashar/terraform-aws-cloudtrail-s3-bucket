@@ -1,5 +1,5 @@
 module "label" {
-  source     = "git::https://github.com/cloudposse/terraform-null-label.git?ref=tags/0.3.3"
+  source     = "git::https://github.com:binbash/terraform-null-label.git?ref=0.11.1"
   namespace  = "${var.namespace}"
   stage      = "${var.stage}"
   name       = "${var.name}"
@@ -54,7 +54,7 @@ data "aws_iam_policy_document" "default" {
 }
 
 module "s3_bucket" {
-  source                             = "git::https://github.com/cloudposse/terraform-aws-s3-log-storage.git?ref=tags/0.4.0"
+  source                             = "git::https://github.com:binbash/terraform-aws-s3-log-storage.git?ref=v0.4.1"
   namespace                          = "${var.namespace}"
   stage                              = "${var.stage}"
   name                               = "${var.name}"
