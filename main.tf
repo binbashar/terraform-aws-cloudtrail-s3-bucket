@@ -54,7 +54,7 @@ data "aws_iam_policy_document" "default" {
 }
 
 module "s3_bucket" {
-  source                             = "git::git@github.com:binbash/terraform-aws-s3-log-storage.git?ref=v0.4.1"
+  source                             = "git::git@github.com:binbashar/terraform-aws-s3-log-storage.git?ref=v0.4.2"
   namespace                          = "${var.namespace}"
   stage                              = "${var.stage}"
   name                               = "${var.name}"
