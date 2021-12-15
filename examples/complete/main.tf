@@ -5,9 +5,8 @@ provider "aws" {
 module "cloudtrail_s3_bucket" {
   source = "../../"
 
-  region        = var.region
-  namespace     = var.namespace
-  stage         = var.stage
-  name          = var.name
-  force_destroy = true
+  force_destroy            = true
+  create_access_log_bucket = true
+
+  context = module.this.context
 }
